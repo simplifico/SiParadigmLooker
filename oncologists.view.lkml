@@ -114,6 +114,7 @@ view: oncologists {
   dimension: state_code_of_the_provider {
     type: string
     sql: ${TABLE}.`State Code of the Provider` ;;
+    map_layer_name: us_states
   }
 
   dimension: street_address_1_of_the_provider {

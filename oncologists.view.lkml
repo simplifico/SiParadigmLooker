@@ -141,4 +141,9 @@ view: oncologists {
     type:  sum
     sql:  ${average_medicare_allowed_amount} ;;
   }
+
+  measure:  total_average_submitted_charge_amount{
+    type: number
+    sql: ${average_submitted_charge_amount}*${number_of_services} ;;
+  }
 }

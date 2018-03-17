@@ -144,6 +144,6 @@ view: oncologists {
 
   measure:  total_average_submitted_charge_amount{
     type: number
-    sql: ${average_submitted_charge_amount}*${number_of_services} ;;
+    sql: round(${average_submitted_charge_amount}*${number_of_services},2) ;;
   }
 }

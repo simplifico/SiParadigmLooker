@@ -135,4 +135,9 @@ view: oncologists {
     type: count
     drill_fields: []
   }
+
+  measure: total_average_medicare_allowed_amount {
+    type:  sum
+    sql:  ${average_medicare_allowed_amount} ;;
+  }
 }

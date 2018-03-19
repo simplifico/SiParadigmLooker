@@ -134,7 +134,7 @@ view: oncologists {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [Oncologists_Details*]
   }
 
   measure: total_average_medicare_allowed_amount {
@@ -160,5 +160,8 @@ view: oncologists {
   measure: mean_average_submitted_charge_amount {
     type:  average
     sql: $total_average_submitted_charge_amount  ;;
+  }
+  set: Oncologists_Details {
+    fields: [national_provider_identifier, first_name_of_the_provider, last_nameorganization_name_of_the_provider, street_address_1_of_the_provider, city_of_the_provider,zip_code_of_the_provider, state_code_of_the_provider, number_of_services, average_submitted_charge_amount, place_of_service]
   }
 }
